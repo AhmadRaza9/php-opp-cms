@@ -28,11 +28,23 @@ class Database
     public function query($sql)
     {
         $result = mysqli_query($this->connection, $sql);
+
+        return $result;
+    }
+
+    private function confirm_query($result)
+    {
         if (!$result) {
             die("QUERY FAILED " . mysqli_error($this->connection));
         }
-        return $result;
     }
+
+    public function escape_string($string)
+    {
+        $escaped_string = mysqli_real_escape_string($this->connection, $string);
+        return $escaped_string;
+    }
+
 }
 
 $database = new Database();
