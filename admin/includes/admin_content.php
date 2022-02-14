@@ -15,6 +15,10 @@ while ($user = mysqli_fetch_array($all_users)) {
     echo $user['username'] . "<br>";
 
 }
+
+$user_by_id = User::find_user_by_id(2);
+echo $user_by_id['username'];
+
 ?>
                         <ol class="breadcrumb">
                             <li>
