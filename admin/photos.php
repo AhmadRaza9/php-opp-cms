@@ -23,7 +23,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Comments
+                            Photos
                             <small>Subheading</small>
                         </h1>
                         <ol class="breadcrumb">
@@ -31,7 +31,7 @@
                                 <i class="fa fa-dashboard"></i>  <a href="index.php">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-file"></i> comments
+                                <i class="fa fa-file"></i> photos
                             </li>
                         </ol>
                     </div>
