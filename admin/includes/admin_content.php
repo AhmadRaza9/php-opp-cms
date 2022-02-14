@@ -9,10 +9,10 @@
                         </h1>
 <?php
 
-$users = new User();
-$all_users = $users->find_all_users();
+// $users = new User();
+$all_users = User::find_all_users();
 while ($user = mysqli_fetch_array($all_users)) {
-    echo $user['username'];
+    echo $user['username'] . "<br>";
 
 }
 ?>
