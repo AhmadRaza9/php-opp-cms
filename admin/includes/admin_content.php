@@ -5,13 +5,16 @@
                     <div class="col-lg-12">
                         <h1 class="page-header">
                             Admin
-                            <small>Subheading</small>
+                            <small>Subheadings</small>
                         </h1>
                         <?php
-if ($database->connection) {
-    echo "true";
+
+$sql = "SELECT * FROM users";
+$users = $database->query($sql);
+while ($user = mysqli_fetch_array($users)) {
+    echo $user['username'];
+
 }
-;
 ?>
                         <ol class="breadcrumb">
                             <li>
