@@ -12,4 +12,4 @@ class User
 
 }
 
-$suer = new User();
+$user = new User();
