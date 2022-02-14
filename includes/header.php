@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>Blog Home - Start Bootstrap Template</title>
+    <link rel="shortcut icon" href="../admin/images/CMS.svg" >
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -31,7 +31,7 @@
 
 
     <!-- Navigation -->
-<?php include("navigation.php"); ?>
+<?php include "navigation.php";?>
 
     <!-- Page Content -->
     <div class="container">

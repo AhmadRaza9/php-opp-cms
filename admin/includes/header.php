@@ -10,8 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>SB Admin - Bootstrap Admin Template</title>
+    <link rel="shortcut icon" href="./images/CMS.svg" >
+
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
