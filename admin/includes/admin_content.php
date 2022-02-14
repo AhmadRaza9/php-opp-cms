@@ -10,15 +10,20 @@
 <?php
 
 // $users = new User();
-$all_users = User::find_all_users();
-while ($user = mysqli_fetch_array($all_users)) {
-    echo $user['username'] . "<br>";
+// $result_set = User::find_all_users();
+// while ($user = mysqli_fetch_array($result_set)) {
+//     echo $user['username'] . "<br>";
 
+// }
+
+// $found_user = User::find_user_by_id(2);
+// $user = User::instantiation($found_user);
+// var_dump($user);
+
+$users = User::find_all_users();
+foreach ($users as $user) {
+    echo $user->username . "<br>";
 }
-
-$found_user = User::find_user_by_id(2);
-$user = User::instantiation($found_user);
-var_dump($user);
 
 ?>
                         <ol class="breadcrumb">
