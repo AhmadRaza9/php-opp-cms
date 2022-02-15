@@ -5,10 +5,9 @@ function autoload($class)
     $class = strtolower($class);
     $path = "includes/{$class}.php";
 
-    if (file_exists($path)) {
-        require_once $path;
-    } else {
-        die("This file name {$class}.php was not found...");
+    // return file_exists($path) ? require_once $path : die("This File name {$class}.php was not found... ");
+    if (is_file($path) && !class_exists($class)) {
+        include $path;
     }
 }
 
