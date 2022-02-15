@@ -31,3 +31,5 @@ if (is_dir(__FILE__)) {
 } else {
     echo "5.No" . "<br>";
 }
+
+echo phpinfo();
