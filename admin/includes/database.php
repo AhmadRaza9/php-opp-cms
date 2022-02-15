@@ -38,7 +38,7 @@ class Database
     {
         if (!$result) {
             // die("QUERY FAILED " . mysqli_error($this->connection));
-            die("QUERY FAILED " . $this->connection->error);
+            die("QUERY FAILED confirm_query " . $this->connection->error);
 
         }
     }
@@ -46,7 +46,7 @@ class Database
     public function escape_string($string)
     {
         // $escaped_string = mysqli_real_escape_string($this->connection, $string);
-        $escaped_string = $this->connection->mysqli_real_escape_string($string);
+        $escaped_string = $this->connection->real_escape_string($string);
         return $escaped_string;
     }
 

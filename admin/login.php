@@ -1,9 +1,10 @@
 <?php require_once "./includes/header.php";?>
 <?php
 
-// if (!$session->is_signed_in()) {
-//     redirect('/index.php');
-// }
+if ($session->is_signed_in()) {
+    redirect('index.php');
+}
+
 $the_message = '';
 
 if (isset($_POST['submit'])) {
@@ -15,7 +16,7 @@ if (isset($_POST['submit'])) {
 
     if ($user_found) {
         $session->login($user_found);
-        redirect('/index.php');
+        redirect('/admin');
     } else {
         $the_message = "Your username or password are incorrect ";
     }
