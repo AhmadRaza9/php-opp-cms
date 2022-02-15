@@ -4,8 +4,7 @@
 if ($session->is_signed_in()) {
     redirect('index.php');
 }
-
-$the_message = '';
+$the_message = "";
 
 if (isset($_POST['submit'])) {
     $username = trim($_POST['username']);
@@ -24,6 +23,8 @@ if (isset($_POST['submit'])) {
 } else {
     $username = "";
     $password = "";
+    $the_message = "";
+
 }
 
 ?>
@@ -31,14 +32,14 @@ if (isset($_POST['submit'])) {
 
 
 <div class="col-md-4 col-md-offset-3">
-<h4 class="bg-danger"><?php echo $the_message; ?></h4>
+<h6 class='bg-danger text-white'><?php if (!empty($the_message)) {echo $the_message;}?></h6>
     <form id="login-id" action="" method="post">
         <div class="form-group">
-            <label for="username" class="text-primary">Username</label>
+            <label for="username" class="text-white">Username</label>
             <input type="text" class="form-control" name="username" value="<?php echo htmlentities($username); ?>" placeholder="Enter Username">
         </div>
         <div class="form-group">
-            <label for="password" class="text-primary">Password</label>
+            <label for="password" class="text-white">Password</label>
             <input type="password" class="form-control" name="password" value="<?php echo htmlentities($password); ?>" placeholder="Enter Password">
         </div>
         <div class="form-group">
