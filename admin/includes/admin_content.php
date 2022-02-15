@@ -20,10 +20,13 @@
 // $user = User::instantiation($found_user);
 // var_dump($user);
 
-$users = User::find_all_users();
-foreach ($users as $user) {
-    echo $user->username . "<br>";
-}
+// $users = User::find_all_users();
+// foreach ($users as $user) {
+//     echo $user->username . "<br>";
+// }
+
+$found_user = User::find_user_by_id(2);
+echo $found_user->username
 
 ?>
                         <ol class="breadcrumb">
