@@ -9,6 +9,7 @@
                         </h1>
 <?php
 
+// $user = new User();
 // $user->username = "username";
 // $user->password = "password";
 // $user->first_name = "first_name";
@@ -16,11 +17,8 @@
 
 // $user->create();
 
-// $user = new User();
-$user = User::find_user_by_id(8);
-
-$user->last_name = "Williams";
-$user->update();
+$user = User::find_user_by_id(12);
+$user->delete();
 
 ?>
                         <ol class="breadcrumb">
