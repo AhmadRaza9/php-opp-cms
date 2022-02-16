@@ -2,17 +2,19 @@
 
 class Db_object
 {
-    protected static $db_table;
+    protected static $db_table = "users";
+    public $username;
 
     public static function find_all()
     {
-        return self::find_this_query("SELECT * FROM " . self::$db_table . " ");
+        return static::find_this_query("SELECT * FROM " . static::$db_table . " ");
+        // return static::find_this_query("SELECT * FROM " . static::$db_table . " ");
     }
 
     public static function find_by_id($user_id)
     {
         global $database;
-        $the_result_array = self::find_this_query("SELECT * FROM " . self::$db_table . " WHERE id = $user_id LIMIT 1");
+        $the_result_array = static::find_this_query("SELECT * FROM " . static::$db_table . " WHERE id = $user_id LIMIT 1");
 
         return !empty($the_result_array) ? array_shift($the_result_array) : false;
 
@@ -24,7 +26,7 @@ class Db_object
         $result_set = $database->query($sql);
         $the_object_array = array();
         while ($row = mysqli_fetch_array($result_set)) {
-            $the_object_array[] = self::instantiation($row);
+            $the_object_array[] = static::instantiation($row);
         }
         return $the_object_array;
     }
@@ -35,20 +37,21 @@ class Db_object
         $username = $database->escape_string($username);
         $password = $database->escape_string($password);
 
-        $sql = "SELECT * FROM " . self::$db_table . " WHERE ";
+        $sql = "SELECT * FROM " . static::$db_table . " WHERE ";
         $sql .= "username = '{$username}' ";
         $sql .= "AND password = '{$password}' ";
         $sql .= "LIMIT 1";
 
-        $the_result_array = self::find_this_query($sql);
+        $the_result_array = static::find_this_query($sql);
         return !empty($the_result_array) ? array_shift($the_result_array) : false;
 
     }
 
     public static function instantiation($the_record)
     {
+        $calling_calass = get_called_class();
         // $user = new User();
-        $the_object = new self;
+        $the_object = new $calling_calass;
 
         foreach ($the_record as $the_attribute => $value) {
             if ($the_object->has_the_attribute($the_attribute)) {
