@@ -17,7 +17,7 @@
 
 // $user->create();
 
-$user = User::find_user_by_id(13);
+$user = User::find_by_id(13);
 // $user->username = "Ricoooo";
 // $user->update();
 
