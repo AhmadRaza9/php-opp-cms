@@ -17,17 +17,17 @@
 
 // $user->create();
 
-// $user = User::find_by_id(13);
-// $user->username = "Ricoooo";
+// $user = User::find_by_id(36);
+// $user->username = "Ricoooossss";
 // $user->update();
 
 // $user->save();
 // $user->delete();
 
-$users = User::find_all();
-foreach ($users as $user) {
-    echo $user->username;
-}
+// $users = User::find_all();
+// foreach ($users as $user) {
+//     echo $user->username;
+// }
 
 ?>
                         <ol class="breadcrumb">
