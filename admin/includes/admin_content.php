@@ -9,24 +9,13 @@
                         </h1>
 <?php
 
-// $users = new User();
-// $result_set = User::find_all_users();
-// while ($user = mysqli_fetch_array($result_set)) {
-//     echo $user['username'] . "<br>";
+$user = new User();
+$user->username = "username1";
+$user->password = "password1";
+$user->first_name = "first_name1";
+$user->last_name = "last_name1";
 
-// }
-
-// $found_user = User::find_user_by_id(2);
-// $user = User::instantiation($found_user);
-// var_dump($user);
-
-// $users = User::find_all_users();
-// foreach ($users as $user) {
-//     echo $user->username . "<br>";
-// }
-
-$found_user = User::find_user_by_id(2);
-echo $found_user->username
+$user->create();
 
 ?>
                         <ol class="breadcrumb">
