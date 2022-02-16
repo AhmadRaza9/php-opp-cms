@@ -29,6 +29,26 @@
 //     echo $user->username;
 // }
 
+// $photo = new Photo();
+// $photo->title = "test";
+// $photo->description = "test description";
+// $photo->filename = "test filename";
+// $photo->type = "test type";
+// $photo->size = "1";
+
+// $photo->create();
+
+// $photos = Photo::find_by_id(1);
+// foreach ($photos as $photo) {
+//     var_dump($photo);
+// }
+
+// $photos = Photo::find_all();
+
+// foreach ($photos as $photo) {
+//     echo $photo->title;
+// }
+
 ?>
                         <ol class="breadcrumb">
                             <li>
