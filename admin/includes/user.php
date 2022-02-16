@@ -3,17 +3,12 @@
 class User
 {
     protected static $db_table = "users";
+    protected static $db_table_field = array('username', 'password', 'first_name', 'last_name');
     public $id;
     public $username;
     public $password;
     public $first_name;
     public $last_name;
-    // public static function find_all_users()
-    // {
-    //     global $database;
-    //     $result_set = $database->query("SELECT * FROM users ");
-    //     return $result_set;
-    // }
 
     public static function find_all_users()
     {
@@ -61,12 +56,6 @@ class User
         // $user = new User();
         $the_object = new self;
 
-        // $the_object->id = $found_user['id'];
-        // $the_object->username = $found_user['username'];
-        // $the_object->password = $found_user['password'];
-        // $the_object->first_name = $found_user['first_name'];
-        // $the_object->last_name = $found_user['last_name'];
-
         foreach ($the_record as $the_attribute => $value) {
             if ($the_object->has_the_attribute($the_attribute)) {
                 $the_object->$the_attribute = $value;
@@ -84,7 +73,14 @@ class User
 
     protected function properties()
     {
-        return get_object_vars($this);
+        $properties = array();
+        foreach (self::$db_table_field as $db_field) {
+
+            if (property_exists($this, $db_field)) {
+                $properties[$db_field] = $this->$db_field;
+            }
+        }
+        return $properties;
     }
 
     public function save()
@@ -97,15 +93,9 @@ class User
         global $database;
 
         $properties = $this->properties();
-        echo implode(',', array_keys($properties));
-        die();
 
         $sql = "INSERT INTO " . self::$db_table . "(" . implode(',', array_keys($properties)) . ")";
-        $sql .= "VALUES('";
-        $sql .= $database->escape_string($this->username) . "', '";
-        $sql .= $database->escape_string($this->password) . "', '";
-        $sql .= $database->escape_string($this->first_name) . "', '";
-        $sql .= $database->escape_string($this->last_name) . "')";
+        $sql .= "VALUES('" . implode("','", array_values($properties)) . "')";
 
         if ($database->query($sql)) {
             $this->id = $database->the_insert_id();
@@ -140,10 +130,6 @@ class User
         $sql = "DELETE FROM " . self::$db_table . " WHERE id = {$this->id} ";
         $database->query($sql);
         return (mysqli_affected_rows($database->connection) == 1) ? true : false;
-
-        // $sql = "DELETE FROM users ";
-        // $sql .= "WHERE id = " . $database->escape_string($this->id);
-        // $sql .= "LIMIT 1";
 
     }
 
