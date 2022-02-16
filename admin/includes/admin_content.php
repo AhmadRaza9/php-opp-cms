@@ -49,7 +49,7 @@
 //     echo $photo->title;
 // }
 
-echo INCLUDES_PATH;
+// echo INCLUDES_PATH;
 
 ?>
                         <ol class="breadcrumb">
