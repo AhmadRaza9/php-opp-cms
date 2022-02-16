@@ -9,13 +9,18 @@
                         </h1>
 <?php
 
-$user = new User();
-$user->username = "username1";
-$user->password = "password1";
-$user->first_name = "first_name1";
-$user->last_name = "last_name1";
+// $user->username = "username";
+// $user->password = "password";
+// $user->first_name = "first_name";
+// $user->last_name = "last_name";
 
-$user->create();
+// $user->create();
+
+// $user = new User();
+$user = User::find_user_by_id(8);
+
+$user->last_name = "Williams";
+$user->update();
 
 ?>
                         <ol class="breadcrumb">
