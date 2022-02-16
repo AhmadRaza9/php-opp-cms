@@ -1,6 +1,24 @@
 <?php include "includes/header.php";?>
 <?php if (!$session->is_signed_in()) {redirect("login.php");}?>
 
+<?php
+$message = "";
+if (isset($_POST['submit'])) {
+
+    $photo = new Photo();
+    $photo->title = $_POST['title'];
+    $photo->set_file($_FILES['file_upload']);
+
+    if ($photo->save()) {
+        $message = "Photo uploaded Successfully";
+    } else {
+        $message = join("<br>", $photo->errors);
+    }
+
+}
+
+?>
+
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <?php include "includes/top_nav.php";?>
@@ -26,6 +44,7 @@
                                 <i class="fa fa-file"></i> upload
                             </li>
                         </ol>
+                        <?php echo $message; ?>
                         <div class="col-md-4">
                             <form action="upload.php" method="POST" enctype="multipart/form-data">
                                 <div class="form-group">
