@@ -17,8 +17,10 @@
 
 // $user->create();
 
-$user = User::find_user_by_id(12);
-$user->delete();
+$user = User::find_user_by_id(13);
+$user->username = "Ricoooo";
+$user->save();
+// $user->delete();
 
 ?>
                         <ol class="breadcrumb">
