@@ -3,8 +3,24 @@
 <?php if (!$session->is_signed_in()) {redirect("login.php");}?>
 
 <?php
-if (isset($_POST['update'])) {
+
+if (empty($_GET['photo_id'])) {
+    redirect("photos.php");
+} else {
+
+    $photos = new Photo();
+    $photo = $photos->find_by_id($_GET['photo_id']);
+
+    if (isset($_POST['update'])) {
+        if ($photos) {
+            $_POST['title'];
+            $_POST['caption'];
+            $_POST['alternative_text'];
+            $_POST['description'];
+        }
+    }
 }
+
 ?>
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -45,20 +61,20 @@ if (isset($_POST['update'])) {
                             <div class="col-md-8">
                                     <div class="form-group">
                                         <label for="title">Title</label>
-                                        <input type="text" name="title" class="form-control">
+                                        <input type="text" name="title" class="form-control" value="<?php echo $photo->title; ?>">
                                     </div>
                                     <div class="form-group">
                                         <label for="caption">Caption</label>
-                                        <input type="text" name="caption" class="form-control">
+                                        <input type="text" name="caption" class="form-control" value="<?php echo $photo->caption; ?>">
                                     </div>
                                     <div class="form-group">
                                         <label for="alternate_text">Alternate Text</label>
-                                        <input type="text" name="alternate_text" class="form-control">
+                                        <input type="text" name="alternate_text" class="form-control" value="<?php echo $photo->alternative_text; ?>">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="description">Description</label>
-                                        <textarea name="description" id="" cols="30" rows="10" class="form-control"></textarea>
+                                        <textarea name="description" id="" cols="30" rows="10" class="form-control"><?php echo $photo->description; ?></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-4" >
