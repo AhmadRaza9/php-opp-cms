@@ -58,9 +58,9 @@ $photos = Photo::find_all();
                                 <tbody>
                                     <?php foreach ($photos as $photo): ?>
                                     <tr>
+                                        <td><img class="img-fluid" style="width: 100px;" src= "<?php echo $photo->picture_path(); ?>"></td>
                                         <td><?php echo $photo->photo_id; ?></td>
                                         <td><?php echo $photo->title; ?></td>
-                                        <td><img class="img-fluid" style="width: 100px;" src="images/<?php echo $photo->filename; ?>"></td>
                                         <td><?php echo $photo->filename; ?></td>
                                         <td><?php echo $photo->size; ?></td>
                                     </tr>
