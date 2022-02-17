@@ -34,6 +34,36 @@
                                 <i class="fa fa-file"></i> photos
                             </li>
                         </ol>
+
+
+                        <div class="col-md-12">
+
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Title</th>
+                                        <th>Photo</th>
+                                        <th>File Name</th>
+                                        <th>Size</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+
+
+
                     </div>
                 </div>
                 <!-- /.row -->
