@@ -13,10 +13,10 @@ if (empty($_GET['photo_id'])) {
 
     if (isset($_POST['update'])) {
         if ($photos) {
-            $_POST['title'];
-            $_POST['caption'];
-            $_POST['alternative_text'];
-            $_POST['description'];
+            $photo->title = $_POST['title'];
+            $photo->caption = $_POST['caption'];
+            $photo->alternative_text = $_POST['alternative_text'];
+            $photo->description = $_POST['description'];
         }
     }
 }
