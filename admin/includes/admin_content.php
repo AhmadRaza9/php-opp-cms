@@ -17,8 +17,8 @@
 
 // $user->create();
 
-// $user = User::find_by_id(36);
-// $user->username = "Ricoooossss";
+// $user = User::find_by_id(1);
+// echo $user->username;
 // $user->update();
 
 // $user->save();
@@ -43,11 +43,9 @@
 //     var_dump($photo);
 // }
 
-// $photos = Photo::find_all();
+// $photos = Photo::find_by_id(9);
 
-// foreach ($photos as $photo) {
-//     echo $photo->title;
-// }
+// echo $photos->title;
 
 // echo INCLUDES_PATH;
 

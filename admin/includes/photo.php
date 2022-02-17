@@ -3,9 +3,9 @@
 class Photo extends Db_object
 {
     protected static $db_table = "photos";
-    protected static $db_table_field = array('title', 'description', 'filename', 'type', 'size');
-    // protected static $db_table_field = array('photo_id', 'title', 'description', 'filename', 'type', 'size');
-    public $photo_id;
+    // protected static $db_table_field = array('title', 'description', 'filename', 'type', 'size');
+    protected static $db_table_field = array('id', 'title', 'description', 'filename', 'type', 'size');
+    public $id;
     public $title;
     public $description;
     public $filename;
@@ -59,7 +59,7 @@ class Photo extends Db_object
 
     public function save()
     {
-        if ($this->photo_id) {
+        if ($this->id) {
             $this->update();
         } else {
 

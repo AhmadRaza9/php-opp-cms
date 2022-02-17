@@ -61,13 +61,13 @@ $photos = Photo::find_all();
                                         <td>
                                             <img class="img-fluid" style="width: 100px;" src= "<?php echo $photo->picture_path(); ?>">
                                             <div class="pictures_links">
-                                                <a href="delete_photo.php?photo_id=<?php echo $photo->photo_id; ?>">Delete</a>
+                                                <a href="delete_photo.php?photo_id=<?php echo $photo->id; ?>">Delete</a>
                                                 <a href="">Edit</a>
                                                 <a href="">View</a>
                                             </div>
                                         </td>
 
-                                        <td><?php echo $photo->photo_id; ?></td>
+                                        <td><?php echo $photo->id; ?></td>
                                         <td><?php echo $photo->title; ?></td>
                                         <td><?php echo $photo->filename; ?></td>
                                         <td><?php echo $photo->size; ?></td>
