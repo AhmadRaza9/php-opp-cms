@@ -48,9 +48,9 @@ $photos = Photo::find_all();
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
+                                        <th>Photo</th>
                                         <th>Id</th>
                                         <th>Title</th>
-                                        <th>Photo</th>
                                         <th>File Name</th>
                                         <th>Size</th>
                                     </tr>
@@ -58,7 +58,15 @@ $photos = Photo::find_all();
                                 <tbody>
                                     <?php foreach ($photos as $photo): ?>
                                     <tr>
-                                        <td><img class="img-fluid" style="width: 100px;" src= "<?php echo $photo->picture_path(); ?>"></td>
+                                        <td>
+                                            <img class="img-fluid" style="width: 100px;" src= "<?php echo $photo->picture_path(); ?>">
+                                            <div class="pictures_links">
+                                                <a href="delete_photo.php?id=<?php echo $photo->photo_id; ?>">Delete</a>
+                                                <a href="">Edit</a>
+                                                <a href="">View</a>
+                                            </div>
+                                        </td>
+
                                         <td><?php echo $photo->photo_id; ?></td>
                                         <td><?php echo $photo->title; ?></td>
                                         <td><?php echo $photo->filename; ?></td>
