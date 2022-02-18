@@ -7,6 +7,13 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
+    <!-- WYSIWYG -->
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <!-- CUSTOM JS -->
+    <script src="js/custom.js"></script>
+
+
 </body>
 
 </html>
