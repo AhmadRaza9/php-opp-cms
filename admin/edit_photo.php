@@ -79,7 +79,8 @@ if (empty($_GET['id'])) {
                                 <div class="col-md-4" >
                                     <div  class="photo-info-box">
                                         <div class="info-box-header">
-                                        <h4>Save <span id="toggle" class="glyphicon glyphicon-menu-up pull-right"></span></h4>
+                                            <h4>Save</h4>
+                                            <button id="toggle_btn" class="my_btns"><span id="toggle" class="glyphicon glyphicon-menu-up pull-right"></span></button>
                                         </div>
                                         <div class="inside">
                                             <div class="box-inner">
@@ -125,5 +126,19 @@ if (empty($_GET['id'])) {
 
         </div>
         <!-- /#page-wrapper -->
+
+<!-- <script>
+
+    $icon = document.getElementById("toggle_btn");
+
+    $box = document.querySelector('.inside');
+
+    $icon.addEventListener('click', e => {
+        e.preventDefault();
+        $box.classList.add('height-0');
+    });
+
+</script> -->
+
 
   <?php include "includes/footer.php";?>
