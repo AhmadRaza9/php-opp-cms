@@ -57,20 +57,20 @@ $users = User::find_all();
                                 </thead>
                                 <tbody>
                                     <?php foreach ($users as $user): ?>
-                                    <tr>
-                                        <td><?php echo $user->id; ?></td>
-                                        <td><img style="width:100px;" src= "images/placeholder.png"></td>
-                                        <td>
-                                            <?php echo $user->username; ?>
-                                            <div class="pictures_links">
-                                                <a href="delete_user.php?id=<?php echo $user->id; ?>">Delete</a>
-                                                <a href="edit_user.php?id=<?php echo $user->id; ?>">Edit</a>
-                                                <a href="">View</a>
-                                            </div>
-                                        </td>
-                                        <td><?php echo $user->first_name; ?></td>
-                                        <td><?php echo $user->last_name; ?></td>
-                                    </tr>
+                                        <tr>
+                                            <td><?php echo $user->id; ?></td>
+                                            <td><img style="width:100px;" src= "images/placeholder.png"></td>
+                                            <td>
+                                                <?php echo $user->username; ?>
+                                                <div class="pictures_links">
+                                                    <a href="delete_user.php?id=<?php echo $user->id; ?>">Delete</a>
+                                                    <a href="edit_user.php?id=<?php echo $user->id; ?>">Edit</a>
+                                                    <a href="">View</a>
+                                                </div>
+                                            </td>
+                                            <td><?php echo $user->first_name; ?></td>
+                                            <td><?php echo $user->last_name; ?></td>
+                                        </tr>
                                     <?php endforeach;?>
                                 </tbody>
                             </table>
