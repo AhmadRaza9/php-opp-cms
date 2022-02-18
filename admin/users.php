@@ -29,9 +29,13 @@ $users = User::find_all();
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Users
-                        </h1>
+                        <div class="col-lg-12 my-flex">
+                            <h1 class="page-header">
+                                Users
+                            </h1>
+                            <p class="alert alert-info">You Can't Change Profile Image.</p>
+                        </div>
+                        <div class="col-lg-12">
                             <a href="add_user.php" class="btn btn-success mb-4">Add New</a>
                         <ol class="breadcrumb">
                             <li>
@@ -41,6 +45,7 @@ $users = User::find_all();
                                 <i class="fa fa-file"></i> users
                             </li>
                         </ol>
+                        </div>
 
 
                         <div class="col-md-12">

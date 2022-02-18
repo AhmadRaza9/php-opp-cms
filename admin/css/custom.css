@@ -54,3 +54,9 @@ nav.navbar.navbar-inverse.navbar-fixed-top:before {
   width: 200px;
   border-radius: 5px;
 }
+
+.my-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

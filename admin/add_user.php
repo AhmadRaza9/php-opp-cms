@@ -4,6 +4,7 @@
 
 <?php
 
+$message = '';
 $user = new User();
 
 if (isset($_POST['submit'])) {
@@ -14,6 +15,9 @@ if (isset($_POST['submit'])) {
         $user->first_name = $_POST['first_name'];
         $user->last_name = $_POST['last_name'];
         $user->password = $_POST['password'];
+
+        $user->save();
+        $message = "User Successfully Added";
     }
 
 }
@@ -66,6 +70,7 @@ if (isset($_POST['submit'])) {
                                     <div class="form-group">
                                         <input type="submit" name="submit" class="btn btn-primary pull-right">
                                     </div>
+                                    <?php echo $message; ?>
                                 </div>
                             </form>
                     </div>
