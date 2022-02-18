@@ -31,8 +31,8 @@ $users = User::find_all();
                     <div class="col-lg-12">
                         <h1 class="page-header">
                             Users
-                            <small>Subheading</small>
                         </h1>
+                            <a href="add_user.php" class="btn btn-success mb-4">Add New</a>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="index.php">Dashboard</a>
