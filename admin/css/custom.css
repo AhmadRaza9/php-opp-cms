@@ -5,21 +5,14 @@ nav.navbar.navbar-inverse.navbar-fixed-top:before {
   vertical-align: middle;
 }
 
-.height-0 {
-  height: 0px;
-  background-color: red;
-}
-
-.my_btns {
-  background-color: transparent;
-  border: none;
-  font-size: 20px;
-  font-weight: 900;
-}
-
 .info-box-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+#toggle {
+  cursor: pointer;
 }
 
 .photo-info-box {

@@ -85,9 +85,9 @@ if (empty($_GET['id'])) {
                                     <div  class="photo-info-box">
                                         <div class="info-box-header">
                                             <h4>Save</h4>
-                                            <button id="toggle_btn" class="my_btns"><span id="toggle" class="glyphicon glyphicon-menu-up pull-right"></span></button>
+                                            <span data-toggle="collapse" data-target="#demo" id="toggle" class="glyphicon glyphicon-menu-up pull-right"></span>
                                         </div>
-                                        <div class="inside">
+                                        <div class="inside collapse in" id="demo">
                                             <div class="box-inner">
                                                 <p class="text">
                                                     <span class="glyphicon glyphicon-calendar"></span> Uploaded on: April 22, 2030 @ 5:26
@@ -132,18 +132,6 @@ if (empty($_GET['id'])) {
         </div>
         <!-- /#page-wrapper -->
 
-<!-- <script>
-
-    $icon = document.getElementById("toggle_btn");
-
-    $box = document.querySelector('.inside');
-
-    $icon.addEventListener('click', e => {
-        e.preventDefault();
-        $box.classList.add('height-0');
-    });
-
-</script> -->
 
 
   <?php include "includes/footer.php";?>
