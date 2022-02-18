@@ -49,3 +49,8 @@ nav.navbar.navbar-inverse.navbar-fixed-top:before {
   background-color: #ddd;
   padding: 10px;
 }
+
+.admin-photo-thumbnail {
+  width: 200px;
+  border-radius: 5px;
+}
