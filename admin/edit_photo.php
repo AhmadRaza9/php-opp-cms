@@ -13,7 +13,7 @@ if (empty($_GET['id'])) {
         if ($photo) {
             $photo->title = $_POST['title'];
             $photo->caption = $_POST['caption'];
-            $photo->alternate_text = $_POST['alternate_text'];
+            $photo->alternative_text = $_POST['alternate_text'];
             $photo->description = $_POST['description'];
             $photo->save();
         }
@@ -68,7 +68,7 @@ if (empty($_GET['id'])) {
                                     </div>
                                     <div class="form-group">
                                         <label for="alternate_text">Alternate Text</label>
-                                        <input type="text" name="alternate_text" class="form-control" value="<?php echo $photo->alternate_text; ?>">
+                                        <input type="text" name="alternate_text" class="form-control" value="<?php echo $photo->alternative_text; ?>">
                                     </div>
 
                                     <div class="form-group">
