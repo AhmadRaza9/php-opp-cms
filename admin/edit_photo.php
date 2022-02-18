@@ -4,19 +4,18 @@
 
 <?php
 
-if (empty($_GET['photo_id'])) {
-    redirect("photos.php");
+if (empty($_GET['id'])) {
+    redirect('photos.php');
 } else {
-
-    $photos = new Photo();
-    $photo = $photos->find_by_id($_GET['photo_id']);
+    $photo = Photo::find_by_id($_GET['id']);
 
     if (isset($_POST['update'])) {
-        if ($photos) {
+        if ($photo) {
             $photo->title = $_POST['title'];
             $photo->caption = $_POST['caption'];
-            $photo->alternative_text = $_POST['alternative_text'];
+            $photo->alternate_text = $_POST['alternate_text'];
             $photo->description = $_POST['description'];
+            $photo->save();
         }
     }
 }
@@ -45,7 +44,7 @@ if (empty($_GET['photo_id'])) {
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Photos
+                            photo
                             <small>Subheading</small>
                         </h1>
                         <ol class="breadcrumb">
@@ -53,11 +52,11 @@ if (empty($_GET['photo_id'])) {
                                 <i class="fa fa-dashboard"></i>  <a href="index.php">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-file"></i> photos
+                                <i class="fa fa-file"></i> photo
                             </li>
                         </ol>
 
-                        <form action="edit_photo.php" method="POST" >
+                        <form method="POST" >
                             <div class="col-md-8">
                                     <div class="form-group">
                                         <label for="title">Title</label>
@@ -69,7 +68,7 @@ if (empty($_GET['photo_id'])) {
                                     </div>
                                     <div class="form-group">
                                         <label for="alternate_text">Alternate Text</label>
-                                        <input type="text" name="alternate_text" class="form-control" value="<?php echo $photo->alternative_text; ?>">
+                                        <input type="text" name="alternate_text" class="form-control" value="<?php echo $photo->alternate_text; ?>">
                                     </div>
 
                                     <div class="form-group">
