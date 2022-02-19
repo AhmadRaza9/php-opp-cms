@@ -105,4 +105,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div id="top_x_div" style="width: 100%; height: 400px;"></div>
+                </div>
             </div>
