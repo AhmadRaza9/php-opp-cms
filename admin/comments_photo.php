@@ -56,7 +56,7 @@ $comments = Comment::find_the_comments($_GET['id']);
                                             <td>
                                                 <?php echo $comment->author; ?>
                                                 <div class="pictures_links">
-                                                    <a href="delete_comment.php?id=<?php echo $comment->id; ?>">Delete</a>
+                                                    <a href="comments_photo_delete.php?id=<?php echo $comment->id; ?>">Delete</a>
                                                 </div>
                                             </td>
                                             <td><?php echo $comment->body; ?></td>
