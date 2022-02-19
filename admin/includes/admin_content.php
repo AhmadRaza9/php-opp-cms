@@ -42,12 +42,12 @@
                                         <i class="fa fa-photo fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">7</div>
+                                        <div class="huge"><?php echo Photo::count_all(); ?></div>
                                         <div>Photos</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+                            <a href="photos.php">
                                 <div class="panel-footer">
                                     <span class="pull-left">Total Photos in Gallery</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -66,15 +66,12 @@
                                         <i class="fa fa-user fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">8
-
-                                        </div>
-
+                                        <div class="huge"><?php echo User::count_all(); ?></div>
                                         <div>Users</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+                            <a href="users.php">
                                 <div class="panel-footer">
                                     <span class="pull-left">Total Users</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -92,12 +89,12 @@
                                         <i class="fa fa-support fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">8</div>
+                                        <div class="huge"><?php echo Comment::count_all(); ?></div>
                                         <div>Comments</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+                            <a href="comments.php">
                                 <div class="panel-footer">
                                     <span class="pull-left">Total Comments</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
