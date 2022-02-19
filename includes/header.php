@@ -1,4 +1,3 @@
-<?php require_once "./admin/includes/init.php";?>
 <!DOCTYPE html>
 <html lang="en">
 

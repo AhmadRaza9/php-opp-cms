@@ -1,18 +1,13 @@
+
 <?php include "includes/header.php";?>
 <?php include "includes/navigation.php";?>
-
+<?php include "admin/includes/init.php";?>
 <?php
 
-$photo = new Photo();
-
-// if (isset($_POST['submit'])) {
-
-// }
+$photo = Photo::find_by_id(27);
+echo $photo->title;
 
 ?>
-
-
-
 
     <!-- Page Content -->
     <div class="container">
