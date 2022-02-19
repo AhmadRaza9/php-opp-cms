@@ -19,11 +19,10 @@
       function drawStuff() {
         var data = new google.visualization.arrayToDataTable([
           ['Move', 'Percentage'],
-          ["King's pawn (e4)", 44],
-          ["Queen's pawn (d4)", 31],
-          ["Knight to King 3 (Nf3)", 12],
-          ["Queen's bishop pawn (c4)", 10],
-          ['Other', 3]
+          ["Views", <?php echo $session->count; ?>],
+          ["Users", <?php echo User::count_all(); ?>],
+          ["Photos", <?php echo Photo::count_all(); ?>],
+          ["Comments", <?php echo Comment::count_all(); ?>],
         ]);
 
         var options = {
