@@ -27,6 +27,7 @@ $photos = Photo::find_all();
             <div class="container-fluid">
 
                 <!-- Page Heading -->
+
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
@@ -53,6 +54,7 @@ $photos = Photo::find_all();
                                         <th>Title</th>
                                         <th>File Name</th>
                                         <th>Size</th>
+                                        <th>View Comment</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -71,6 +73,11 @@ $photos = Photo::find_all();
                                         <td><?php echo $photo->title; ?></td>
                                         <td><?php echo $photo->filename; ?></td>
                                         <td><?php echo $photo->size; ?></td>
+                                        <td>
+                                            <p class="badge"><?php $comments = Comment::find_the_comments($photo->id);
+echo count($comments);?></p>
+                                            <a href="comments_photo.php?id=<?php echo $photo->id; ?>">View All Comments</a>
+                                        </td>
                                     </tr>
                                     <?php endforeach;?>
                                 </tbody>
