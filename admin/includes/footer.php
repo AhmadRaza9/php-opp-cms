@@ -30,11 +30,11 @@
           width: 800,
           legend: { position: 'none' },
           chart: {
-            title: 'Chess opening moves',
-            subtitle: 'popularity by percentage' },
+            title: '',
+            subtitle: '' },
           axes: {
             x: {
-              0: { side: 'top', label: 'White to move'} // Top x-axis.
+              0: { side: 'top', label: ''} // Top x-axis.
             }
           },
           bar: { groupWidth: "90%" }
