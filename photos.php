@@ -7,7 +7,7 @@
 if (empty($_GET['id'])) {
     redirect("index.php");
 }
-
+$message = '';
 $photo = Photo::find_by_id($_GET['id']);
 
 if (isset($_POST['sumbit'])) {
@@ -19,9 +19,15 @@ if (isset($_POST['sumbit'])) {
 
     if ($new_comment && $new_comment->save()) {
         redirect("photo.php?id={$photo->id}");
+    } else {
+        $message = "There was some problems saving";
     }
+} else {
+    $author = "";
+    $body = "";
 }
 
+Comment::find_the_comments($photo->id);
 ?>
 
     <!-- Page Content -->
@@ -50,13 +56,13 @@ if (isset($_POST['sumbit'])) {
                 <hr>
 
                 <!-- Preview Image -->
-                <img class="img-responsive" src="/admin/images/<?php echo $photo->filename; ?>" alt="">
+                <img class="img-responsive" src="/admin/images/" alt="">
 
                 <hr>
 
                 <!-- Post Content -->
-                <p class="lead"><?php echo $photo->title; ?></p>
-                <p><?php echo $photo->description; ?></p>
+                <p class="lead"></p>
+                <p></p>
                 <hr>
 
                 <!-- Blog Comments -->
