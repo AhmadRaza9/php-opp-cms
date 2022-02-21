@@ -34,16 +34,8 @@ if (isset($_POST['submit'])) {
                     <div class="col-lg-12">
                         <h1 class="page-header">
                             Uploads
-                            <small>Subheading</small>
                         </h1>
-                        <ol class="breadcrumb">
-                            <li>
-                                <i class="fa fa-dashboard"></i>  <a href="index.php">Dashboard</a>
-                            </li>
-                            <li class="active">
-                                <i class="fa fa-file"></i> upload
-                            </li>
-                        </ol>
+
                         <?php echo $message; ?>
                         <div class="col-md-4">
                             <form action="upload.php" method="POST" enctype="multipart/form-data">
