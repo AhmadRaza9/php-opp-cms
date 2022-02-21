@@ -20,13 +20,14 @@
         var data = new google.visualization.arrayToDataTable([
           ['Move', 'Percentage'],
           ["Views", <?php echo $session->count; ?>],
-          ["Users", <?php echo User::count_all(); ?>],
           ["Photos", <?php echo Photo::count_all(); ?>],
+          ["Users", <?php echo User::count_all(); ?>],
           ["Comments", <?php echo Comment::count_all(); ?>],
         ]);
 
         var options = {
           width: 800,
+          backgroundColor : 'transparent ',
           legend: { position: 'none' },
           chart: {
             title: '',
@@ -40,7 +41,7 @@
         };
 
         var chart = new google.charts.Bar(document.getElementById('top_x_div'));
-        // Convert the Classic options to Material options.
+
         chart.draw(data, google.charts.Bar.convertOptions(options));
       };
     </script>
