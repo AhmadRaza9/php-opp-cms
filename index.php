@@ -18,7 +18,7 @@ $photos = Photo::find_by_query($sql);
 
         <div class="row">
             <!-- Blog Entries Column -->
-            <div class="col-md-12">
+            <div class="col-md-12 text-center">
                 <div class="img-box-grid">
                     <?php foreach ($photos as $photo): ?>
                         <div>
@@ -28,6 +28,13 @@ $photos = Photo::find_by_query($sql);
                         </div>
                     <?php endforeach;?>
                 </div>
+                <ul class="pager">
+                    <?php if ($paginate->page_total() > 1): ?>
+                        <?php if ($paginate->has_next()): ?>
+                            <li class="next"><a href="">Next</a></li>
+                        <?php endif;?>
+                    <?php endif;?>
+                </ul>
             </div>
 
             <!-- Blog Sidebar Widgets Column -->
