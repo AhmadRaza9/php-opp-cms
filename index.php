@@ -9,18 +9,15 @@ $photos = Photo::find_all();
         <div class="row">
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-
-            <?php foreach ($photos as $photo): ?>
-
-            <?php endforeach;?>
-                <div class="thumbnails row">
-                    <div class="col-xs-6 col-md-3">
-                        <a href="" class="thumbnail">
-                            <img src="" alt="">
-                        </a>
-                    </div>
+                <div class="img-box-grid">
+                    <?php foreach ($photos as $photo): ?>
+                        <div>
+                            <a href="photos.php?id=<?php echo $photo->id; ?>" class="thumbnail">
+                                <img src="admin/<?php echo $photo->picture_path(); ?>" alt="">
+                            </a>
+                        </div>
+                    <?php endforeach;?>
                 </div>
-
             </div>
 
             <!-- Blog Sidebar Widgets Column -->

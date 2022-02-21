@@ -1,15 +1,15 @@
             <div class="container-fluid">
                 <!-- Page Heading -->
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
                             Admin
                             <small>Dashboard</small>
                         </h1>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
+                </div> -->
+                <div class="row mt-2">
+                    <!-- <div class="col-lg-3 col-md-6">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <div class="row">
@@ -18,7 +18,7 @@
                                     </div>
                                     <div class="col-xs-9 text-right">
                                         <div class="huge">
-<?php echo $session->count; ?>
+<#?php echo $session->count; ?>
                                         </div>
                                         <div>New Views</div>
                                     </div>
@@ -32,7 +32,7 @@
                                 </div>
                             </a>
                         </div>
-                    </div>
+                    </div> -->
 
                         <div class="col-lg-3 col-md-6">
                         <div class="panel panel-green">

@@ -19,7 +19,7 @@
       function drawStuff() {
         var data = new google.visualization.arrayToDataTable([
           ['Move', 'Percentage'],
-          ["Views", <?php echo $session->count; ?>],
+          // ["Views", <#?php echo $session->count; ?>],
           ["Photos", <?php echo Photo::count_all(); ?>],
           ["Users", <?php echo User::count_all(); ?>],
           ["Comments", <?php echo Comment::count_all(); ?>],

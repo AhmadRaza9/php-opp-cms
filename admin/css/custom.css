@@ -60,3 +60,8 @@ nav.navbar.navbar-inverse.navbar-fixed-top:before {
   align-items: center;
   justify-content: space-between;
 }
+.img-box-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}

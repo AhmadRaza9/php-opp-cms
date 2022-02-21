@@ -1,7 +1,6 @@
 
 <?php include "includes/header.php";?>
 <?php include "includes/navigation.php";?>
-<?php include "admin/includes/init.php";?>
 <?php
 
 if (empty($_GET['id'])) {
