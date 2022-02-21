@@ -31,9 +31,14 @@ $photos = Photo::find_by_query($sql);
                 <ul class="pager">
                     <?php if ($paginate->page_total() > 1): ?>
                         <?php if ($paginate->has_next()): ?>
-                            <li class="next"><a href="">Next</a></li>
+                            <li class="next"><a href="?page=<?php echo $paginate->next(); ?>">Next</a></li>
                         <?php endif;?>
                     <?php endif;?>
+
+                    <?php if ($paginate->has_previous()): ?>
+                        <li class="previous"><a href="?page=<?php echo $paginate->previous(); ?>">Previous</a></li>
+                    <?php endif;?>
+
                 </ul>
             </div>
 
