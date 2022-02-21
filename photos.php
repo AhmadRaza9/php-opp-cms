@@ -35,32 +35,20 @@ $comments = Comment::find_the_comments($photo->id);
         <div class="row">
 
             <!-- Blog Post Content Column -->
-            <div class="col-lg-8">
+            <div class="col-lg-12">
 
                 <!-- Blog Post -->
 
                 <!-- Title -->
-                <h1>Blog Post Title</h1>
-
-                <!-- Author -->
-                <p class="lead">
-                    by <a href="#">Start Bootstrap</a>
-                </p>
-
-                <hr>
-
-                <!-- Date/Time -->
+                <h1><?php echo $photo->title; ?></h1>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
 
                 <hr>
 
                 <!-- Preview Image -->
                 <img class="img-responsive" src="/admin/images/<?php echo $photo->filename; ?>" alt="">
-
                 <hr>
-
-                <!-- Post Content -->
-                <p class="lead"><?php echo $photo->title; ?></p>
+                <p><strong><?php echo $photo->caption; ?></strong></p>
                 <p><?php echo $photo->description; ?></p>
                 <hr>
 
@@ -100,9 +88,9 @@ $comments = Comment::find_the_comments($photo->id);
             </div>
 
             <!-- Blog Sidebar Widgets Column -->
-            <div class="col-md-4">
-                <?php include "includes/sidebar.php";?>
-            </div>
+            <!-- <div class="col-md-4">
+                <#?php include "includes/sidebar.php";?>
+            </div> -->
 
         </div>
         <!-- /.row -->
