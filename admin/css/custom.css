@@ -65,3 +65,7 @@ nav.navbar.navbar-inverse.navbar-fixed-top:before {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
 }
+.bg-active {
+  background-color: black !important;
+  color: white;
+}

@@ -29,11 +29,20 @@ $photos = Photo::find_by_query($sql);
                     <?php endforeach;?>
                 </div>
                 <ul class="pager">
+
                     <?php if ($paginate->page_total() > 1): ?>
                         <?php if ($paginate->has_next()): ?>
                             <li class="next"><a href="?page=<?php echo $paginate->next(); ?>">Next</a></li>
                         <?php endif;?>
                     <?php endif;?>
+
+                    <?php for ($i = 1; $i <= $paginate->page_total(); $i++): ?>
+                        <?php if ($i == $paginate->current_page) {
+    echo "<li><a class='bg-active' href='?page={$i}'>${i}</a></li>";
+} else {
+    echo "<li><a href='?page={$i}'>${i}</a></li>";
+}?>
+                    <?php endfor;?>
 
                     <?php if ($paginate->has_previous()): ?>
                         <li class="previous"><a href="?page=<?php echo $paginate->previous(); ?>">Previous</a></li>
