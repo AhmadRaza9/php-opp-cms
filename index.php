@@ -12,8 +12,6 @@ $sql = "SELECT * FROM photos LIMIT {$items_per_page} OFFSET {$paginate->offset()
 
 $photos = Photo::find_by_query($sql);
 
-// $photos = Photo::find_all();
-
 ?>
 
         <div class="row">
@@ -50,13 +48,6 @@ $photos = Photo::find_by_query($sql);
 
                 </ul>
             </div>
-
-            <!-- Blog Sidebar Widgets Column -->
-            <!-- <div class="col-md-4">
-                 <#?php include "includes/sidebar.php";?>
-            </div> -->
-            <!-- Blog Sidebar Widgets Column -->
-
 
         <!-- /.row -->
         <?php include "includes/footer.php";?>
