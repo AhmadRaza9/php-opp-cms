@@ -54,23 +54,23 @@ if (isset($_POST['submit'])) {
                         <form method="POST" enctype="multipart/form-data">
                             <div class="col-md-4">
                                     <div class="form-group">
-                                        <input type="file" name="user_image" class="form-control">
+                                        <input type="file" name="user_image" class="form-control" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="username">Username</label>
-                                        <input type="text" name="username" class="form-control" placeholder="Enter Username">
+                                        <input type="text" name="username" class="form-control" placeholder="Enter Username" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="first_name">First Name</label>
-                                        <input type="text" name="first_name" class="form-control" placeholder="Enter First Name">
+                                        <input type="text" name="first_name" class="form-control" placeholder="Enter First Name" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="last_name">Last Name</label>
-                                        <input type="text" name="last_name" class="form-control" placeholder="Enter Last Name">
+                                        <input type="text" name="last_name" class="form-control" placeholder="Enter Last Name" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="password">Password</label>
-                                        <input type="password" name="password" class="form-control" placeholder="Enter Password">
+                                        <input type="password" name="password" class="form-control" placeholder="Enter Password" required>
                                     </div>
                                     <div class="form-group">
                                         <input type="submit" name="submit" class="btn btn-primary pull-right">
