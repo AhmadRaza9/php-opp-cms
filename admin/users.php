@@ -64,7 +64,7 @@ $users = User::find_all();
                                     <?php foreach ($users as $user): ?>
                                         <tr>
                                             <td><?php echo $user->id; ?></td>
-                                            <td><img style="width:100px;" src= "images/placeholder.png"></td>
+                                            <td><img style="width:100px;" src= "<?php echo $user->image_path_and_placeholder(); ?>"></td>
                                             <td>
                                                 <?php echo $user->username; ?>
                                                 <div class="pictures_links">

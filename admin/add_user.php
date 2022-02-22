@@ -49,7 +49,7 @@ if (isset($_POST['submit'])) {
                             Add new user
                         </h1>
 
-                        <form method="POST" >
+                        <form method="POST" enctype="multipart/form-data">
                             <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="username">Username</label>
