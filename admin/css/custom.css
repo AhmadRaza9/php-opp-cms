@@ -69,3 +69,39 @@ nav.navbar.navbar-inverse.navbar-fixed-top:before {
   background-color: black !important;
   color: white;
 }
+
+/** lightbox css **/
+
+.modal-dialog {
+  width: 90% !important;
+  max-width: 100%;
+  z-index: 1050;
+}
+
+.modal-body {
+  overflow: auto;
+  height: 500px !important;
+  min-height: 300px !important;
+}
+
+.modal_thumbnails {
+  width: 150px;
+  height: 100px !important;
+}
+
+#set_user_image {
+  margin: 10px;
+}
+
+#modal_sidebar {
+  position: fixed !important;
+}
+.modal-backdrop.in {
+  opacity: 0;
+}
+
+.apply_section {
+  margin-right: 0;
+}
+
+/** lightbox css **/

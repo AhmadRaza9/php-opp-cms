@@ -17,12 +17,14 @@ if (isset($_POST['submit'])) {
         $user->password = $_POST['password'];
         $user->set_file($_FILES['user_image']);
         $user->save_user_and_image();
+        $user->save();
         $message = "User Successfully Added";
     }
 
 }
 
 ?>
+
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
