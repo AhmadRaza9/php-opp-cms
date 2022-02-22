@@ -33,6 +33,11 @@ $comments = Comment::find_all();
                             <h1 class="page-header">
                                 Comments
                             </h1>
+                                                     <?php
+if (!empty($message)) {
+    echo "<p class='my-message'>" . $message . "</p>";
+}
+?>
                         </div>
 
                         <div class="col-md-12">

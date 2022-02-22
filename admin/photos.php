@@ -41,6 +41,11 @@ $photos = Photo::find_by_query($sql);
                         <h1 class="page-header">
                             Photos
                         </h1>
+                         <?php
+if (!empty($message)) {
+    echo "<p class='my-message'>" . $message . "</p>";
+}
+?>
                 <ul class="pager">
 
                     <?php if ($paginate->page_total() > 1): ?>

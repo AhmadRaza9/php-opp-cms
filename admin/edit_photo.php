@@ -45,7 +45,6 @@ if (empty($_GET['id'])) {
                     <div class="col-lg-12">
                         <h1 class="page-header">
                             photo
-                            <small>Subheading</small>
                         </h1>
                         <ol class="breadcrumb">
                             <li>
