@@ -61,9 +61,9 @@ if (isset($_POST['update'])) {
                         <h1 class="page-header">
                             Add new user
                         </h1>
-                        <div class="col-md-6">
+                        <div class="col-md-6 user_image_box">
                             <a href="" data-toggle="modal" data-target="#photo-library">
-                                <img class="img-responsive" src="<?php echo $user->image_path_and_placeholder(); ?>" alt="">
+                                <img class="img-responsive changed_image" src="<?php echo $user->image_path_and_placeholder(); ?>" alt="">
                             </a>
                         </div>
                         <form method="POST" enctype="multipart/form-data">

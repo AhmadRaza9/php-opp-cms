@@ -37,14 +37,6 @@ $users = User::find_all();
                         </div>
                         <div class="col-lg-12">
                             <a href="add_user.php" class="btn btn-success mb-4">Add New</a>
-                        <ol class="breadcrumb">
-                            <li>
-                                <i class="fa fa-dashboard"></i>  <a href="index.php">Dashboard</a>
-                            </li>
-                            <li class="active">
-                                <i class="fa fa-file"></i> users
-                            </li>
-                        </ol>
                         </div>
 
 
