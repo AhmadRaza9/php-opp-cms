@@ -18,10 +18,16 @@ if (isset($_POST['update'])) {
         $user->first_name = $_POST['first_name'];
         $user->last_name = $_POST['last_name'];
         $user->password = $_POST['password'];
-        $user->set_file($_FILES['user_image']);
-
-        $user->save_user_and_image();
-        redirect("users.php");
+        if (empty($_FILES['user_image'])) {
+            $user->save();
+        }
+        if (!empty($_FILES['user_image'])) {
+            $user->set_file($_FILES['user_image']);
+            $user->save_user_and_image();
+            $user->save();
+            redirect("edit_user.php?id={$user->id}");
+        }
+        // redirect("users.php");
     }
 
 }
@@ -53,7 +59,7 @@ if (isset($_POST['update'])) {
                             Add new user
                         </h1>
                         <div class="col-md-6">
-                            <img src="<?php echo $user->image_path_and_placeholder(); ?>" alt="">
+                            <img class="img-responsive" src="<?php echo $user->image_path_and_placeholder(); ?>" alt="">
                         </div>
                         <form method="POST" enctype="multipart/form-data">
                             <div class="col-md-4">
