@@ -88,6 +88,9 @@ if (isset($_POST['update'])) {
                                         <input type="password" name="password" class="form-control" placeholder="Enter Password" value="<?php echo $user->password; ?>">
                                     </div>
                                     <div class="form-group">
+                                        <input type="hidden" class="user_id" value="<?php echo $user->id; ?>">
+                                    </div>
+                                    <div class="form-group">
                                         <input type="submit" name="update" value="Update" class="btn btn-primary pull-right">
                                     </div>
                                 </div>
