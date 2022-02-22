@@ -15,8 +15,8 @@ if (isset($_POST['submit'])) {
         $user->first_name = $_POST['first_name'];
         $user->last_name = $_POST['last_name'];
         $user->password = $_POST['password'];
-
-        $user->save();
+        $user->set_file($_FILES['user_image']);
+        $user->save_user_and_image();
         $message = "User Successfully Added";
     }
 
@@ -51,6 +51,10 @@ if (isset($_POST['submit'])) {
 
                         <form method="POST" enctype="multipart/form-data">
                             <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="user_image">Username</label>
+                                        <input type="file" name="user_image" class="form-control">
+                                    </div>
                                     <div class="form-group">
                                         <label for="username">Username</label>
                                         <input type="text" name="username" class="form-control" placeholder="Enter Username">
