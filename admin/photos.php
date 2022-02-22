@@ -86,7 +86,7 @@ if (!empty($message)) {
                                         <td>
                                             <img class="admin-photo-thumbnail"  src= "<?php echo $photo->picture_path(); ?>">
                                             <div class="pictures_links">
-                                                <a href="delete_photo.php?id=<?php echo $photo->id; ?>">Delete</a>
+                                                <a class="delete_link" href="delete_photo.php?id=<?php echo $photo->id; ?>">Delete</a>
                                                 <a href="edit_photo.php?id=<?php echo $photo->id; ?>">Edit</a>
                                                 <a href="/photos.php?id=<?php echo $photo->id; ?>">View</a>
                                             </div>
