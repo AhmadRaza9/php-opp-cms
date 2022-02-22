@@ -105,3 +105,8 @@ nav.navbar.navbar-inverse.navbar-fixed-top:before {
 }
 
 /** lightbox css **/
+.my-message {
+  background-color: lightgreen;
+  padding: 5px;
+  border-radius: 5px;
+}

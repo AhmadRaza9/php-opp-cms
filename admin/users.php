@@ -30,10 +30,15 @@ $users = User::find_all();
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="col-lg-12 my-flex">
+
                             <h1 class="page-header">
                                 Users
                             </h1>
-                            <p class="alert alert-info">You Can't Change Profile Image.</p>
+                            <?php
+if (!empty($message)) {
+    echo "<p class='my-message'>" . $message . "</p>";
+}
+?>
                         </div>
                         <div class="col-lg-12">
                             <a href="add_user.php" class="btn btn-success mb-4">Add New</a>
