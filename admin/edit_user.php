@@ -98,11 +98,8 @@ if (isset($_POST['update'])) {
                     </div>
                 </div>
                 <!-- /.row -->
-
             </div>
             <!-- /.container-fluid -->
-
-
         </div>
         <!-- /#page-wrapper -->
 
