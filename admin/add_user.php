@@ -18,7 +18,8 @@ if (isset($_POST['submit'])) {
         $user->set_file($_FILES['user_image']);
         $user->save_user_and_image();
         $user->save();
-        $message = "User Successfully Added";
+        redirect("users.php");
+        $session->message("User Successfully Added.");
     }
 
 }
