@@ -81,5 +81,13 @@ class User extends Db_object
         }
 
     }
+
+    public function ajax_save_user_image($user_image, $user_id)
+    {
+        $this->user_image = $user_image;
+        $this->id = $user_id;
+        $this->save();
+
+    }
 }
 // End of Class User

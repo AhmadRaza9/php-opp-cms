@@ -20,7 +20,7 @@ $(document).ready(function () {
       type: "POST",
       success: function (data) {
         if (!data.error) {
-          alert(data);
+          location.reload(true);
         }
       },
     });
