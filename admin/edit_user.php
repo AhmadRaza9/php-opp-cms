@@ -18,8 +18,9 @@ if (isset($_POST['update'])) {
         $user->first_name = $_POST['first_name'];
         $user->last_name = $_POST['last_name'];
         $user->password = $_POST['password'];
+        $user->set_file($_FILES['user_image']);
 
-        $user->save();
+        $user->save_user_and_image();
         redirect("users.php");
     }
 
@@ -51,9 +52,14 @@ if (isset($_POST['update'])) {
                         <h1 class="page-header">
                             Add new user
                         </h1>
-
-                        <form method="POST" >
+                        <div class="col-md-6">
+                            <img src="<?php echo $user->image_path_and_placeholder(); ?>" alt="">
+                        </div>
+                        <form method="POST" enctype="multipart/form-data">
                             <div class="col-md-4">
+                                    <div class="form-group">
+                                        <input type="file" name="user_image" class="form-control">
+                                    </div>
                                     <div class="form-group">
                                         <label for="username">Username</label>
                                         <input type="text" name="username" class="form-control" placeholder="Enter Username" value="<?php echo $user->username; ?>">

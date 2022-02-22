@@ -52,7 +52,6 @@ if (isset($_POST['submit'])) {
                         <form method="POST" enctype="multipart/form-data">
                             <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="user_image">Username</label>
                                         <input type="file" name="user_image" class="form-control">
                                     </div>
                                     <div class="form-group">
